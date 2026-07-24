@@ -46,6 +46,8 @@
                 <div class="underline"></div>
             </div>
             
+            <img src="https://static.wixstatic.com/media/e43254_be732f175c2249fc8e7da8dba086c399~mv2.jpg/v1/fill/w_1000,h_699,al_c,q_85/e43254_be732f175c2249fc8e7da8dba086c399~mv2.jpg" alt="Origem e História do Vôlei" class="blog-img margin-bottom">
+
             <div class="text-content">
                 <p>Imagina que você está em <strong>1895</strong>, o basquete acabou de ser inventado, mas a galera mais velha está achando o esporte cansativo e bruto demais. Foi aí que um diretor de educação física chamado <strong>William G. Morgan</strong> teve uma ideia: <em>“E se a gente colocasse uma rede alta de tênis no meio do ginásio e fizesse o pessoal rebater uma bola com as mãos?”</em></p>
                 
@@ -132,6 +134,8 @@
                     </div>
                 </div>
             </div>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA8vaqwez5b2ZqLZkPSwPvgRSCXcIBS8dS3cKTq6KZ3xWyqStPvaVVHFzN&s=10" alt="Posições do Vôlei em Quadra" class="blog-img margin-top">
         </section>
 
         <section id="comparacao" class="section-card">
@@ -175,6 +179,8 @@
                     </tbody>
                 </table>
             </div>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd0Bu2agSjsA6xw0GlF15AmQLzoCxgjUUt4pEXbZljuQV0NqQRxVI9Jox-&s=10" alt="Vôlei de Quadra versus Vôlei de Praia" class="blog-img margin-top">
         </section>
 
         <section id="curiosidades" class="section-card">
@@ -232,7 +238,6 @@
     </footer>
 
     <script>
-        // 1. Destaque do Menu Conforme a Rolagem da Página
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section');
@@ -252,7 +257,6 @@
                 }
             });
 
-            // 2. Exibição do Botão Voltar ao Topo
             const topBtn = document.getElementById('backToTop');
             if (window.scrollY > 300) {
                 topBtn.classList.add('visible');
@@ -261,12 +265,10 @@
             }
         });
 
-        // 3. Clique no Botão Voltar ao Topo
         document.getElementById('backToTop').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // 4. Interatividade dos Botões de Posição
         const posButtons = document.querySelectorAll('.pos-btn');
         const posCards = document.querySelectorAll('.pos-card');
 
@@ -281,7 +283,6 @@
             });
         });
 
-        // 5. Quiz Interativo
         function checkQuiz(button, isCorrect) {
             const feedback = document.getElementById('quiz-feedback');
             const options = document.querySelectorAll('.quiz-opt');
