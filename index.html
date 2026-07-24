@@ -1,21 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Meu Blog de Tecnologia</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Vôlei | Origem, Posições e Curiosidades</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-<h1>origem e história</h1>
-</header>
-<nav>
-<a href="#">Início</a> | <a href="#">Sobre</a>
-</nav>
-<main>
-<h2>Título da Postagem</h2>
-<p>Este é o meu primeiro site criado na escola!</p>
-<img src="[aqui você puxa imagens que você armazenou no GitHub dentro de uma pasta]" alt="Minha Imagem">
-</main>
+
+    <header class="main-header">
+        <div class="header-overlay">
+            <div class="header-content">
+                <span class="badge"><i class="fas fa-volleyball-ball"></i> Blog Escolar de Educação Física</span>
+                <h1>Origem e História do Vôlei</h1>
+                <p>Tudo o que você precisa saber sobre as regras, posições, curiosidades e a paixão nacional pelo vôlei!</p>
+                <a href="#historia" class="btn-primary">Começar a Leitura <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-volleyball-ball logo-icon"></i> <span>Vôlei<span>Blog</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#historia" class="active">História</a></li>
+                <li><a href="#posicoes">Posições</a></li>
+                <li><a href="#comparacao">Quadra vs Praia</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+                <li><a href="#quiz">Quiz Interativo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="historia" class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Tema 1: Origem e História — Como Tudo Começou</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="text-content">
+                    <p>Imagina que você está em <strong>1895</strong>, o basquete acabou de ser inventado, mas a galera mais velha está achando o esporte cansativo e bruto demais. Foi aí que um diretor de educação física chamado <strong>William G. Morgan</strong> teve uma ideia: <em>“E se a gente colocasse uma rede alta de tênis no meio do ginásio e fizesse o pessoal rebater uma bola com as mãos?”</em></p>
+                    
+                    <p>No começo, o esporte ganhou o nome esquisito de <strong>Mintonette</strong>, mas logo alguém reparou que a graça do jogo era a bola ficar voando de um lado para o outro (<em>to volley</em> a bola, em inglês). Assim nasceu o <strong>Volleyball</strong>.</p>
+
+                    <div class="highlight-box">
+                        <i class="fas fa-trophy highlight-icon"></i>
+                        <p>O esporte cruzou oceanos e chegou ao Brasil por volta de <strong>1915</strong>. O resto é história: hoje somos uma das maiores potências do vôlei mundial, colecionando medalhas de ouro e orgulhando o país.</p>
+                    </div>
+                </div>
+
+                <div class="media-container">
+                    <div class="image-wrapper">
+                        <img src="imagens/origem-historia-volei.jpg" alt="Origem e História do Vôlei" class="blog-img">
+                        <span class="img-caption"><i class="fas fa-image"></i> Espaço para Imagem: Repositório GitHub (/imagens/origem-historia-volei.jpg)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="posicoes" class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Tema 3: Posições e Funções — Quem é Quem no Jogo?</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <p class="intro-text">No vôlei, ninguém joga sozinho e cada um tem uma missão muito clara na quadra. Se você não quer ficar perdido no rodízio, conheça a função de cada um. <strong>Clique nos botões abaixo para ver os detalhes de cada jogador:</strong></p>
+
+            <div class="positions-interactive">
+                <div class="position-buttons">
+                    <button class="pos-btn active" data-target="levantador"><i class="fas fa-hands"></i> Levantador</button>
+                    <button class="pos-btn" data-target="libero"><i class="fas fa-shield-alt"></i> Líbero</button>
+                    <button class="pos-btn" data-target="central"><i class="fas fa-ruler-vertical"></i> Central</button>
+                    <button class="pos-btn" data-target="ponteiro"><i class="fas fa-bolt"></i> Ponteiro</button>
+                    <button class="pos-btn" data-target="oposto"><i class="fas fa-bullseye"></i> Oposto</button>
+                </div>
+
+                <div class="position-cards">
+                    <div class="pos-card active" id="levantador">
+                        <div class="pos-header">
+                            <i class="fas fa-hands pos-icon"></i>
+                            <div>
+                                <h3>Levantador</h3>
+                                <span class="badge-role">O Cérebro do Time</span>
+                            </div>
+                        </div>
+                        <p>É o cérebro e o “garçom” do time. Ele recebe o segundo toque e distribui a bola com precisão milimétrica para os atacantes pontuarem.</p>
+                    </div>
+
+                    <div class="pos-card" id="libero">
+                        <div class="pos-header">
+                            <i class="fas fa-shield-alt pos-icon"></i>
+                            <div>
+                                <h3>Líbero</h3>
+                                <span class="badge-role">Especialista em Defesa</span>
+                            </div>
+                        </div>
+                        <p>O mestre da defesa. Ele usa uma camisa de cor diferente (não, ele não esqueceu o uniforme no vestiário!) porque tem regras exclusivas: só joga na parte do fundo, não pode sacar, não pode atacar e não pode bloquear. A missão dele é não deixar a bola cair de jeito nenhum.</p>
+                    </div>
+
+                    <div class="pos-card" id="central">
+                        <div class="pos-header">
+                            <i class="fas fa-ruler-vertical pos-icon"></i>
+                            <div>
+                                <h3>Central</h3>
+                                <span class="badge-role">O Gigante da Rede</span>
+                            </div>
+                        </div>
+                        <p>O gigante da rede. Geralmente é o jogador mais alto do time. Ele é responsável por montar os paredões no bloqueio e fazer ataques rápidos de surpresa no meio.</p>
+                    </div>
+
+                    <div class="pos-card" id="ponteiro">
+                        <div class="pos-header">
+                            <i class="fas fa-bolt pos-icon"></i>
+                            <div>
+                                <h3>Ponteiro (ou Ponta)</h3>
+                                <span class="badge-role">O Faz-Tudo</span>
+                            </div>
+                        </div>
+                        <p>O faz-tudo. Ele precisa passar bem na defesa e, ao mesmo tempo, ter força e impulsão para atacar pelas laterais da quadra.</p>
+                    </div>
+
+                    <div class="pos-card" id="oposto">
+                        <div class="pos-header">
+                            <i class="fas fa-bullseye pos-icon"></i>
+                            <div>
+                                <h3>Oposto</h3>
+                                <span class="badge-role">O Artilheiro</span>
+                            </div>
+                        </div>
+                        <p>O artilheiro do time. Ele joga na posição oposta ao levantador e a única função dele é descer o braço e colocar a bola no chão do adversário. É o cara que resolve as jogadas mais difíceis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-wrapper margin-top">
+                <img src="imagens/posicoes-volei-quadra.jpg" alt="Posições do Vôlei em Quadra" class="blog-img">
+                <span class="img-caption"><i class="fas fa-image"></i> Espaço para Imagem: Esquema Tático (/imagens/posicoes-volei-quadra.jpg)</span>
+            </div>
+        </section>
+
+        <section id="comparacao" class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-balance-scale"></i> Tema 5: Vôlei de Quadra vs. Vôlei de Praia — Principais Diferenças</h2>
+                <div class="underline"></div>
+            </div>
+
+            <p>Embora a essência de passar a bola por cima da rede seja a mesma, jogar no cimento e jogar na areia sob o sol são experiências completamente diferentes. Veja as principais diferenças no quadro abaixo:</p>
+
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th><i class="fas fa-building"></i> Vôlei de Quadra</th>
+                            <th><i class="fas fa-umbrella-beach"></i> Vôlei de Praia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Jogadores</strong></td>
+                            <td>6 de cada lado (mais os reservas).</td>
+                            <td>Apenas 2 de cada lado (sem direito a substituição).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>O Piso</strong></td>
+                            <td>Chão duro (madeira ou sintético).</td>
+                            <td>Areia fofa (exige o dobro de força nas pernas).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tamanho da Quadra</strong></td>
+                            <td>18 m × 9 m</td>
+                            <td>16 m × 8 m (um pouco menor para a dupla dar conta).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ambiente</strong></td>
+                            <td>Ginásio fechado, sem interferência do clima.</td>
+                            <td>Céu aberto: vento, sol na cara e óculos escuros obrigatórios.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="image-wrapper margin-top">
+                <img src="imagens/quadra-vs-praia.jpg" alt="Vôlei de Quadra versus Vôlei de Praia" class="blog-img">
+                <span class="img-caption"><i class="fas fa-image"></i> Espaço para Imagem: Comparativo Quadra x Praia (/imagens/quadra-vs-praia.jpg)</span>
+            </div>
+        </section>
+
+        <section id="curiosidades" class="section-card">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> Tema 8: Curiosidades e Recordes Impressionantes</h2>
+                <div class="underline"></div>
+            </div>
+
+            <p>Para fechar o blog com chave de ouro e garantir aqueles cliques, aqui estão alguns fatos do vôlei que parecem mentira, mas são 100% reais:</p>
+
+            <div class="curiosities-grid">
+                <div class="curiosity-card">
+                    <div class="card-badge"><i class="fas fa-tachometer-alt"></i> 138 km/h</div>
+                    <h3>O Saque Mais Rápido do Mundo</h3>
+                    <p>O recorde oficial pertence ao cubano <strong>Wilfredo León</strong>. Ele mandou um saque que atingiu impressionantes <strong>138 km/h</strong>. É mais rápido do que um carro na estrada! Se a bola pegar de jeito em alguém, desmancha o penteado na hora.</p>
+                </div>
+
+                <div class="curiosity-card">
+                    <div class="card-badge"><i class="fas fa-stopwatch"></i> 4h 36min</div>
+                    <h3>Haja Fôlego!</h3>
+                    <p>O jogo mais longo da história das Olimpíadas aconteceu em <strong>1976</strong>, entre a Polônia e a União Soviética. A partida durou exaustivas <strong>4 horas e 36 minutos</strong>. Imagine a dor nas panturrilhas desses atletas no dia seguinte.</p>
+                </div>
+
+                <div class="curiosity-card">
+                    <div class="card-badge"><i class="fas fa-palette"></i> Ano 1998</div>
+                    <h3>Por que a bola é colorida?</h3>
+                    <p>Antigamente, as bolas de vôlei eram totalmente brancas. A Federação Internacional mudou para o padrão tricolor (geralmente amarelo, azul e branco) em <strong>1998</strong> para que os torcedores e os telespectadores conseguissem enxergar a bola mais facilmente na televisão.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="section-card quiz-section">
+            <div class="section-header">
+                <h2><i class="fas fa-gamepad"></i> Desafio Interativo: Teste seus Conhecimentos!</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div id="quiz-container">
+                <p class="quiz-question">Qual era o nome original do voleibol quando foi inventado em 1895 por William G. Morgan?</p>
+                <div class="quiz-options">
+                    <button class="quiz-opt" onclick="checkQuiz(this, false)">A) Volley-Ball</button>
+                    <button class="quiz-opt" onclick="checkQuiz(this, true)">B) Mintonette</button>
+                    <button class="quiz-opt" onclick="checkQuiz(this, false)">C) Netball</button>
+                </div>
+                <div id="quiz-feedback" class="quiz-feedback"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="backToTop" title="Voltar ao Topo"><i class="fas fa-arrow-up"></i></button>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por: Amanda Cristina e Isadora Sansana - Turma 1TB</p>
+    </footer>
+
+    <script>
+        // 1. Destaque do Menu Conforme a Rolagem da Página
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const navLi = document.querySelectorAll('.nav-links a');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('active');
+                }
+            });
+
+            // 2. Exibição do Botão Voltar ao Topo
+            const topBtn = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                topBtn.classList.add('visible');
+            } else {
+                topBtn.classList.remove('visible');
+            }
+        });
+
+        // 3. Clique no Botão Voltar ao Topo
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 4. Interatividade dos Botões de Posição
+        const posButtons = document.querySelectorAll('.pos-btn');
+        const posCards = document.querySelectorAll('.pos-card');
+
+        posButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                posButtons.forEach(b => b.classList.remove('active'));
+                posCards.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // 5. Quiz Interativo
+        function checkQuiz(button, isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            const options = document.querySelectorAll('.quiz-opt');
+            
+            options.forEach(opt => opt.disabled = true);
+
+            if (isCorrect) {
+                button.classList.add('correct');
+                feedback.innerHTML = '<i class="fas fa-check-circle"></i> <strong>Parabéns! Resposta Correta!</strong> O esporte originalmente se chamava Mintonette antes de mudar para Volleyball.';
+                feedback.className = 'quiz-feedback correct-msg';
+            } else {
+                button.classList.add('wrong');
+                feedback.innerHTML = '<i class="fas fa-times-circle"></i> <strong>Ops! Resposta Incorreta.</strong> O nome inicial do vôlei era <strong>Mintonette</strong>!';
+                feedback.className = 'quiz-feedback wrong-msg';
+            }
+        }
+    </script>
 </body>
 </html>
