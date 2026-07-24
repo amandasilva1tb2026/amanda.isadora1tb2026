@@ -1,6 +1,6 @@
 /* =========================================================
    ESTILOS PRINCIPAIS - BLOG DE VÔLEI
-   Cores: Tons de Azul (#0a3d62, #1e3799), Amarelo (#f1c40f, #ffc048) e Branco (#ffffff)
+   Cores: Azul Escuro (#0a2540), Azul (#1e3799), Amarelo (#f1c40f) e Branco (#ffffff)
    ========================================================= */
 
 * {
@@ -29,10 +29,12 @@ body {
     line-height: 1.7;
 }
 
-/* Header & Banner */
+/* =========================================================
+   HEADER & BANNER PRINCIPAL
+   ========================================================= */
+
 .main-header {
-    background: linear-gradient(135deg, rgba(10, 37, 64, 0.9), rgba(30, 55, 153, 0.85)), 
-                url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(30, 55, 153, 0.9));
     color: var(--branco);
     padding: 90px 20px 70px 20px;
     text-align: center;
@@ -88,7 +90,10 @@ body {
     transform: translateY(-3px);
 }
 
-/* Navegação Fixa */
+/* =========================================================
+   BARRA DE NAVEGAÇÃO FIXA
+   ========================================================= */
+
 .main-nav {
     position: sticky;
     top: 0;
@@ -143,7 +148,10 @@ body {
     color: var(--azul-escuro);
 }
 
-/* Layout Geral de Seções */
+/* =========================================================
+   LAYOUT GERAL DAS SEÇÕES
+   ========================================================= */
+
 .container {
     max-width: 1100px;
     margin: 40px auto;
@@ -183,11 +191,8 @@ body {
     border-radius: 2px;
 }
 
-.content-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 30px;
-    align-items: center;
+.text-content p {
+    margin-bottom: 15px;
 }
 
 .highlight-box {
@@ -207,37 +212,49 @@ body {
     margin-top: 3px;
 }
 
-/* Espaço para Imagens do GitHub */
+/* =========================================================
+   AJUSTE DE IMAGENS (GRANDES E INTEIRAS)
+   ========================================================= */
+
 .image-wrapper {
-    background-color: #eef2f7;
-    border: 2px dashed var(--azul-claro);
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafd;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+    box-sizing: border-box;
+}
+
+.margin-top {
+    margin-top: 25px;
 }
 
 .blog-img {
     width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 6px;
+    max-height: 550px; /* Imagem bem grande e legível */
+    object-fit: contain; /* Exibe a imagem INTEIRA sem nenhum corte */
+    border-radius: 8px;
     display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .img-caption {
-    display: block;
-    margin-top: 8px;
-    font-size: 0.8rem;
-    color: #666;
-    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    text-align: center;
 }
 
-.margin-top {
-    margin-top: 30px;
-}
+/* =========================================================
+   INTERATIVIDADE DE POSIÇÕES (ABAS)
+   ========================================================= */
 
-/* Interatividade de Posições */
 .intro-text {
     margin-bottom: 20px;
 }
@@ -305,7 +322,10 @@ body {
     display: inline-block;
 }
 
-/* Tabela Comparativa Quadra vs Praia */
+/* =========================================================
+   TABELA COMPARATIVA QUADRA VS PRAIA
+   ========================================================= */
+
 .table-container {
     overflow-x: auto;
     margin-top: 20px;
@@ -343,7 +363,10 @@ body {
     background-color: #f8fafd;
 }
 
-/* Curiosidades em Cards */
+/* =========================================================
+   CURIOSIDADES EM CARDS
+   ========================================================= */
+
 .curiosities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -384,7 +407,10 @@ body {
     font-size: 1.1rem;
 }
 
-/* Quiz Section */
+/* =========================================================
+   QUIZ INTERATIVO
+   ========================================================= */
+
 .quiz-section {
     border-top: 5px solid var(--amarelo-destaque);
 }
@@ -447,7 +473,10 @@ body {
     color: #721c24;
 }
 
-/* Botão Voltar ao Topo */
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+   ========================================================= */
+
 #backToTop {
     position: fixed;
     bottom: 25px;
@@ -478,7 +507,10 @@ body {
     transform: scale(1.1);
 }
 
-/* Rodapé Exigido */
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
 footer {
     background-color: var(--azul-escuro);
     color: var(--branco);
@@ -488,7 +520,10 @@ footer {
     border-top: 3px solid var(--amarelo-destaque);
 }
 
-/* Animações e Responsividade */
+/* =========================================================
+   ANIMAÇÕES E RESPONSIVIDADE
+   ========================================================= */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -497,10 +532,6 @@ footer {
 @media (max-width: 768px) {
     .main-header h1 {
         font-size: 2rem;
-    }
-    
-    .content-grid {
-        grid-template-columns: 1fr;
     }
 
     .nav-container {
@@ -516,5 +547,9 @@ footer {
 
     .position-buttons {
         justify-content: center;
+    }
+
+    .blog-img {
+        max-height: 350px; /* Ajuste para telas menores */
     }
 }
